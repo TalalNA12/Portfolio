@@ -28,7 +28,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
   return (
     <motion.div 
       exit={{ opacity: 0, filter: "blur(10px)" }}
-      className="fixed inset-0 z-[100] bg-black flex flex-col items-center justify-center font-mono p-4"
+      className="fixed inset-0 z-100 bg-black flex flex-col items-center justify-center font-mono p-4"
     >
       <div className="w-full max-w-sm">
         <div className="flex items-center gap-2 mb-6">
@@ -37,7 +37,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
           <div className="w-3 h-3 rounded-full bg-emerald-500/80 animate-pulse delay-150" />
         </div>
         
-        <div className="space-y-1.5 min-h-[120px]">
+        <div className="space-y-1.5 min-h-30">
           {bootLogs.slice(0, currentLog + 1).map((log, i) => (
             <motion.div 
               key={i}

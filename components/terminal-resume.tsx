@@ -13,7 +13,7 @@ export default function ResumeTerminal() {
     setTimeout(() => setStatus("decrypting"), 1500);
     setTimeout(() => {
       setStatus("complete");
-      window.open("/files/TALAL NADEEM AWAN (1).pdf", "_blank");
+      window.open("/files/Talal Nadeem Awan Curriculum Vitae.pdf", "_blank");
     }, 3500);
   };
 
@@ -46,7 +46,7 @@ export default function ResumeTerminal() {
               </button>
             </div>
 
-            <div className="p-6 space-y-4 min-h-[200px] flex flex-col justify-center">
+            <div className="p-6 space-y-4 min-h-50 flex flex-col justify-center">
               {status === "idle" && (
                 <div className="text-center">
                   <p className="text-neutral-400 mb-6 uppercase tracking-widest text-xs">Requesting access to personnel_archive.dat</p>

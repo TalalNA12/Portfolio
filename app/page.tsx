@@ -35,7 +35,7 @@ export default function Portfolio() {
           className="min-h-screen bg-black text-neutral-50 font-sans selection:bg-emerald-500/30 relative isolate overflow-x-hidden"
         >
           <motion.div 
-            className="fixed top-0 left-0 right-0 h-1 bg-emerald-500 origin-left z-[60] shadow-[0_0_10px_#10b981]" 
+            className="fixed top-0 left-0 right-0 h-1 bg-emerald-500 origin-left z-60 shadow-[0_0_10px_#10b981]" 
             style={{ scaleX }} 
           />
 

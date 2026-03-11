@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <div className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden">
       
-      <div className="absolute top-0 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/15 rounded-full blur-[120px] pointer-events-none z-0"></div>
+      <div className="absolute top-0 -translate-y-1/2 w-150 h-150 bg-emerald-500/15 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
         
