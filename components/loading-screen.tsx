@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
+
 const bootLogs = [
   "INITIALIZING SECURE_SHELL...",
   "LOADING GREEK_MYTH_PROTOCOL...",
@@ -13,6 +14,13 @@ const bootLogs = [
 ];
 
 export default function LoadingScreen({ onComplete }: { onComplete: () => void }) {
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const [currentLog, setCurrentLog] = useState(0);
 
   useEffect(() => {
@@ -45,7 +53,9 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
               animate={{ opacity: 1, x: 0 }}
               className={`${i === bootLogs.length - 1 ? "text-emerald-500 font-bold" : "text-neutral-500"} text-xs md:text-sm`}
             >
-              <span className="mr-2 text-neutral-800">[{new Date().toLocaleTimeString([], { hour12: false })}]</span>
+              <span className="mr-2 text-neutral-800">
+                [{mounted ? new Date().toLocaleTimeString([], { hour12: false }) : "00:00:00"}]
+              </span>
               {log}
             </motion.div>
           ))}

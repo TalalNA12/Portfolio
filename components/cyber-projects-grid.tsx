@@ -1,5 +1,5 @@
 import { FlippingCard } from "@/components/ui/flipping-card";
-import { ShieldAlert, Terminal, Lock, Activity, ServerCrash, Network } from "lucide-react";
+import { ShieldAlert, Terminal, Lock, Activity, ServerCrash, Network, Ghost, Route } from "lucide-react";
 
 interface CardData {
   id: string;
@@ -106,6 +106,36 @@ const cardsData: CardData[] = [
       description: "An advanced honeypot that traps scanners, logs their IPs, and retaliates with fabricated TCP packets to initiate a Denial of Service (DoS) against the attacker.",
       buttonText: "View Incident Response",
       link: "https://www.linkedin.com/posts/talal-nadeem-awan-9431192b7_one-of-my-first-fully-built-projects-crafted-activity-7361116087242870785-0vUy",
+    },
+  },
+  {
+    id:"blackhook",
+    front: {
+      imageSrc: "/icons/BlackHook.png",
+      imageAlt: "BlackHook Keylogger Sim",
+      title: "BlackHook",
+      description: "T1056 Behavior Simulation & Detection",
+      icon: <Ghost className="w-5 h-5 text-purple-500" />
+    },
+    back:{
+      description: "Simulates keylogger-like buffer tracking without capturing real keystrokes. Paired with a Python-based detector using dynamic analysis via ProcMon to flag suspicious file activity.",
+      buttonText: "Review Threat Intel",
+      link: "https://www.linkedin.com/posts/talal-nadeem-awan-9431192b7_cybersecurity-python-malwareanalysis-ugcPost-7477759078040043521-lIdF/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEwDjwMBPtPx4joIHhHKKbTf6gLurAdchbU",
+    }
+  },
+  {
+    id: "pathfinder",
+    front: {
+      imageSrc: "/icons/PathFinder.png", 
+      imageAlt: "PathFinder MASM Array",
+      title: "PathFinder",
+      description: "16-bit Assembly DFS Algorithm",
+      icon: <Route className="w-5 h-5 text-cyan-500" />,
+    },
+    back: {
+      description: "Built for the 8086 microarchitecture using MASM. Maps a directed graph into a 1D memory array and executes an interactive Depth-First Search with hardware interrupt validation.",
+      buttonText: "Examine Registers",
+      link: "https://www.linkedin.com/posts/talal-nadeem-awan-9431192b7_assemblylanguage-lowlevelengineering-masm-ugcPost-7477739515206385667-PpMJ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEwDjwMBPtPx4joIHhHKKbTf6gLurAdchbU", 
     },
   },
 ];

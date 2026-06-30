@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Geist_Mono } from "next/font/google";
+// @ts-ignore: CSS module declaration missing in this project setup
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
