@@ -1,8 +1,18 @@
 "use client";
 
-import { Shield, Terminal, Database, FileCheck, Code2, Globe } from "lucide-react";
+import { Shield, Terminal, Database, FileCheck, Code2, Cpu, Network } from "lucide-react";
 
 const skillNodes = [
+  {
+    title: "AI_RAG & LLM",
+    icon: <Cpu className="w-5 h-5 text-emerald-400" />,
+    skills: ["DocuMind AI Engine", "PGVector & HNSW Indexing", "Gemini 768D Pipelines", "Deterministic Grounding", "Hybrid Quantum-Classical Neural Nets"]
+  },
+  {
+    title: "Agentic_&_MCP",
+    icon: <Network className="w-5 h-5 text-cyan-400" />,
+    skills: ["Model Context Protocol (MCP)", "JSON-RPC Daemons", "Sandboxed Tool Execution", "Real-time Context Streaming", "Autonomous Workflows"]
+  },
   {
     title: "Offensive_Security",
     icon: <Shield className="w-5 h-5 text-red-500" />,
@@ -35,10 +45,10 @@ export default function TechnicalStack() {
             <Terminal className="text-emerald-500 w-6 h-6" />
             <span className="uppercase tracking-[0.2em]">Technical_Arsenal</span>
           </h2>
-          <div className="h-px w-full bg-linear-to-r from-emerald-500/50 to-transparent mt-4"></div>
+          <div className="h-px w-full bg-gradient-to-r from-emerald-500/50 to-transparent mt-4"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillNodes.map((node, index) => (
             <div 
               key={index}

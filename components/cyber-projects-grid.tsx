@@ -1,5 +1,18 @@
 import { FlippingCard } from "@/components/ui/flipping-card";
-import { ShieldAlert, Terminal, Lock, Activity, ServerCrash, Network, Ghost, Route } from "lucide-react";
+import { 
+  ShieldAlert, 
+  Terminal, 
+  Lock, 
+  Activity, 
+  ServerCrash, 
+  Network, 
+  Ghost, 
+  Route, 
+  ShieldCheck, 
+  Cpu, 
+  AudioWaveform, 
+  Flame 
+} from "lucide-react";
 
 interface CardData {
   id: string;
@@ -109,19 +122,19 @@ const cardsData: CardData[] = [
     },
   },
   {
-    id:"blackhook",
+    id: "blackhook",
     front: {
       imageSrc: "/icons/BlackHook.png",
       imageAlt: "BlackHook Keylogger Sim",
       title: "BlackHook",
       description: "T1056 Behavior Simulation & Detection",
-      icon: <Ghost className="w-5 h-5 text-purple-500" />
+      icon: <Ghost className="w-5 h-5 text-purple-500" />,
     },
-    back:{
+    back: {
       description: "Simulates keylogger-like buffer tracking without capturing real keystrokes. Paired with a Python-based detector using dynamic analysis via ProcMon to flag suspicious file activity.",
       buttonText: "Review Threat Intel",
       link: "https://www.linkedin.com/posts/talal-nadeem-awan-9431192b7_cybersecurity-python-malwareanalysis-ugcPost-7477759078040043521-lIdF/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEwDjwMBPtPx4joIHhHKKbTf6gLurAdchbU",
-    }
+    },
   },
   {
     id: "pathfinder",
@@ -136,6 +149,66 @@ const cardsData: CardData[] = [
       description: "Built for the 8086 microarchitecture using MASM. Maps a directed graph into a 1D memory array and executes an interactive Depth-First Search with hardware interrupt validation.",
       buttonText: "Examine Registers",
       link: "https://www.linkedin.com/posts/talal-nadeem-awan-9431192b7_assemblylanguage-lowlevelengineering-masm-ugcPost-7477739515206385667-PpMJ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEwDjwMBPtPx4joIHhHKKbTf6gLurAdchbU", 
+    },
+  },
+  {
+    id: "irongate",
+    front: {
+      imageSrc: "/icons/IronGate.png",
+      imageAlt: "IronGate CI/CD Security",
+      title: "IronGate",
+      description: "CI/CD Pipeline Security Scanner",
+      icon: <ShieldCheck className="w-5 h-5 text-cyan-400" />,
+    },
+    back: {
+      description: "Advanced CI/CD security scanner designed to intercept vulnerabilities, audit build stages, and enforce compliance before production deployment.",
+      buttonText: "Audit Pipeline",
+      link: "https://github.com/TalalNA12/irongate-cicd-security",
+    },
+  },
+  {
+    id: "documind",
+    front: {
+      imageSrc: "/icons/DocuMind-AI.png",
+      imageAlt: "DocuMind-AI",
+      title: "DocuMind-AI",
+      description: "LLM Document Intelligence Engine",
+      icon: <Cpu className="w-5 h-5 text-emerald-500" />,
+    },
+    back: {
+      description: "Advanced document processing and conversational intelligence engine designed for complex text extraction and contextual querying.",
+      buttonText: "View Deployment Intel",
+      link: "https://www.linkedin.com/feed/update/urn:li:activity:7495919990353842176/",
+    },
+  },
+  {
+    id: "echobrief",
+    front: {
+      imageSrc: "/icons/EchoBrief.png",
+      imageAlt: "EchoBrief",
+      title: "EchoBrief",
+      description: "Voice Note & Text Summarizer",
+      icon: <AudioWaveform className="w-5 h-5 text-cyan-400" />,
+    },
+    back: {
+      description: "Streamlined audio/text information condensation pipeline optimized for high-density information throughput and swift executive review.",
+      buttonText: "Access Repository",
+      link: "https://github.com/TalalNA12/EchoBrief",
+    },
+  },
+  {
+    id: "vermilion-agent",
+    front: {
+      imageSrc: "/icons/Vermilion_Sales_Agent.png",
+      imageAlt: "Vermilion Sales Agent",
+      title: "Vermilion Sales Agent",
+      description: "Autonomous Competition Sales Agent",
+      icon: <Flame className="w-5 h-5 text-red-500" />,
+    },
+    back: {
+      description: "Specialized competitive sales agent engineered for dynamic multi-step negotiation, automated outreach, and intelligent conversion tracking.",
+      buttonText: "Review Source",
+      link: "https://github.com/TalalNA12/competition-agent",
     },
   },
 ];
@@ -163,7 +236,7 @@ interface GenericCardFrontProps {
 function GenericCardFront({ data }: GenericCardFrontProps) {
   return (
     <div className="flex flex-col h-full w-full p-4 relative overflow-hidden group">
-      <div className="absolute inset-0 bg-linear-to-t from-neutral-950 via-neutral-950/20 to-transparent z-10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent z-10" />
       <img
         src={data.imageSrc}
         alt={data.imageAlt}

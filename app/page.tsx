@@ -1,9 +1,10 @@
 "use client";
 
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
 import HeroSection from "@/components/hero-section";
 import CyberProjectsGrid from "@/components/cyber-projects-grid";
+import { MediumWriteupsSection } from "@/components/medium-writeups";
 import DynamicBackground from "@/components/dynamic-bg";
 import TechnicalStack from "@/components/technical-stack";
 import ResumeTerminal from "@/components/terminal-resume";
@@ -79,7 +80,7 @@ function AresVortexCommandCenter() {
         </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-          {/* Left Column: Operational Pipeline (Restored Original Structure) */}
+          {/* Left Column: Operational Pipeline */}
           <div className="lg:col-span-5 space-y-8">
             <h2 className="text-xl font-bold text-white uppercase tracking-widest border-b border-neutral-900 pb-2 mb-8">
               <span className="text-purple-500 mr-2">/</span> Operational Pipeline
@@ -221,6 +222,7 @@ export default function Portfolio() {
                 
                 <Reveal>
                   <CyberProjectsGrid />
+                  <MediumWriteupsSection />
                 </Reveal>
               </section>
 
@@ -236,9 +238,9 @@ export default function Portfolio() {
                       
                       <div className="space-y-6 text-sm">
                         <div className="border-l-2 border-emerald-500/30 pl-4 py-1">
-                          <span className="text-emerald-500 block text-[10px] uppercase tracking-widest mb-1 font-bold">Identity</span>
-                          <p className="text-neutral-300">Talal Nadeem Awan</p>
-                          <p className="text-neutral-500 text-xs font-sans">Cyber Security @ COMSATS Islamabad</p>
+                          <span className="text-emerald-500 block text-[10px] uppercase tracking-widest mb-1 font-bold">Node_Operator</span>
+                          <p className="text-neutral-300">4R3S_VX Security Engine</p>
+                          <p className="text-neutral-500 text-xs font-sans">Autonomous DevSecOps & AI Architecture</p>
                         </div>
 
                         <div className="border-l-2 border-emerald-500/30 pl-4 py-1">
@@ -274,7 +276,7 @@ export default function Portfolio() {
                       </p>
                       
                       <div className="flex flex-col gap-4">
-                        <a href="mailto:talal.awan20@gmail.com" className="flex items-center gap-4 p-4 rounded-lg bg-black/80 border border-neutral-800 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all group">
+                        <a href="mailto:secure@4r3svx.internal" className="flex items-center gap-4 p-4 rounded-lg bg-black/80 border border-neutral-800 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all group">
                           <Mail className="w-5 h-5 text-neutral-400 group-hover:text-emerald-400" />
                           <span className="font-mono text-sm text-neutral-300 group-hover:text-emerald-400">Direct_Email</span>
                         </a>
@@ -282,7 +284,7 @@ export default function Portfolio() {
                           <Github className="w-5 h-5 text-neutral-400 group-hover:text-emerald-400" />
                           <span className="font-mono text-sm text-neutral-300 group-hover:text-emerald-400">Review_Source_Code</span>
                         </a>
-                        <a href="https://linkedin.com/in/talal-nadeem-awan-9431192b7" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-black/80 border border-neutral-800 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all group">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-black/80 border border-neutral-800 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all group">
                           <Linkedin className="w-5 h-5 text-neutral-400 group-hover:text-emerald-400" />
                           <span className="font-mono text-sm text-neutral-300 group-hover:text-emerald-400">Professional_Network</span>
                         </a>
