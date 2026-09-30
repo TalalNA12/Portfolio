@@ -11,12 +11,32 @@ interface WriteupData {
   link: string;
   tags: string[];
   metrics: { label: string; value: string }[];
+  imageSrc?: string;
+  badgeLabel?: string;
 }
 
 const writeups: WriteupData[] = [
   {
+    id: "documind-rag-v2",
+    title: "Beyond Toy RAG (Part 2)",
+    subtitle: "Why Pure Vector Search Broke in Production and How DocuMind v2 Fixed It",
+    description:
+      "A battle-tested breakdown of why pure semantic embeddings failed on exact alphanumeric identifiers in production, and how DocuMind v2 solved it with PostgreSQL Hybrid Search (combining pgvector HNSW with tsvector GIN via Reciprocal Rank Fusion, RRF k=60), slashed TTFT to <800ms with FastAPI SSE streaming, decoupled storage with Supabase buckets, and built an in-memory cascade fallback engine.",
+    date: "Sep 2026",
+    readTime: "7 min read",
+    link: "https://medium.com/@talal.awan20/beyond-toy-rag-part-2-why-pure-vector-search-broke-in-production-and-how-documind-v2-fixed-it-1cb3eb306d95",
+    tags: ["Hybrid Search", "PostgreSQL", "RRF", "FastAPI", "SSE", "Celery", "DocuMind"],
+    metrics: [
+      { label: "Search Engine", value: "Hybrid + RRF (k=60)" },
+      { label: "Inference Loop", value: "SSE (<800ms TTFT)" },
+      { label: "Failover Engine", value: "In-Memory Cascade" },
+    ],
+    imageSrc: "/writeups/documind-v2-arch.jpg",
+    badgeLabel: "Production Architecture (v2)",
+  },
+  {
     id: "documind-rag",
-    title: "Beyond Toy RAG",
+    title: "Beyond Toy RAG (Part 1)",
     subtitle: "Building an Asynchronous, Production-Ready Document AI Engine",
     description:
       "A deep architectural dissection of scaling document intelligence beyond basic vector retrieval. Covers asynchronous task decoupling with FastAPI, Redis, and Celery, HNSW indexing on PGVector, and grounded verification pipelines.",
@@ -29,6 +49,8 @@ const writeups: WriteupData[] = [
       { label: "Pipeline", value: "Decoupled Async" },
       { label: "Model", value: "Gemini 768D" },
     ],
+    imageSrc: "/writeups/documind-arch.jpg",
+    badgeLabel: "Architecture Teardown (v1)",
   },
 ];
 
@@ -60,7 +82,7 @@ export function MediumWriteupsSection() {
 
         {/* Articles Display */}
         <div className="grid grid-cols-1 gap-8">
-          {writeups.map((item) => (
+          {writeups.map((item, index) => (
             <div
               key={item.id}
               className="group relative bg-neutral-950 border border-neutral-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(16,185,129,0.12)] flex flex-col lg:flex-row"
@@ -68,11 +90,14 @@ export function MediumWriteupsSection() {
               {/* Interactive Spark Badge Visualizer */}
               <div className="lg:w-1/2 relative bg-black overflow-hidden min-h-[360px] lg:min-h-full flex items-center justify-center p-4 border-b lg:border-b-0 lg:border-r border-neutral-800">
                 <div className="w-full h-full max-w-[340px] aspect-square flex items-center justify-center">
-                  <SparkBadge className="w-full h-full rounded-xl overflow-hidden" />
+                  <SparkBadge
+                    imageSrc={item.imageSrc}
+                    className="w-full h-full rounded-xl overflow-hidden"
+                  />
                 </div>
                 <div className="absolute top-4 left-4 z-20 bg-black/80 backdrop-blur-md px-3 py-1 rounded-md border border-neutral-800 text-[11px] font-mono text-emerald-400 flex items-center gap-1.5 pointer-events-none">
                   <Cpu className="w-3.5 h-3.5" />
-                  <span>Architecture Teardown</span>
+                  <span>{item.badgeLabel || "Architecture Teardown"}</span>
                 </div>
               </div>
 
@@ -83,6 +108,11 @@ export function MediumWriteupsSection() {
                     <span className="text-emerald-400 font-bold">{item.date}</span>
                     <span>•</span>
                     <span>{item.readTime}</span>
+                    {index === 0 && (
+                      <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                        Latest Release
+                      </span>
+                    )}
                   </div>
 
                   <h3 className="text-2xl font-bold font-mono text-white group-hover:text-emerald-400 transition-colors mb-2">

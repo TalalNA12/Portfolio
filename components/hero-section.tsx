@@ -25,13 +25,15 @@ export default function HeroSection() {
             <span className="text-neutral-500 mr-2">{'>'}</span>
             <TypeAnimation
               sequence={[
-                "Secure Full-Stack Engineer.",
+                "Security Engineer & Developer.",
                 2000,
-                "Active Defense & Threat Analyst.",
+                "Production AI & RAG Architect.",
                 2000,
-                "Architecting Hardened Infrastructure.",
+                "GRC & ISO 27001 Specialist.",
                 2000,
-                "ISO 27001 Compliance Integration.",
+                "Active Defense & AppSec Analyst.",
+                2000,
+                "Automated DevSecOps & CI/CD.",
                 2000,
                 "Bridging Hardware & Web Security.",
                 2000,

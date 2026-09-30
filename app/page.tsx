@@ -239,21 +239,21 @@ export default function Portfolio() {
                       <div className="space-y-6 text-sm">
                         <div className="border-l-2 border-emerald-500/30 pl-4 py-1">
                           <span className="text-emerald-500 block text-[10px] uppercase tracking-widest mb-1 font-bold">Node_Operator</span>
-                          <p className="text-neutral-300">4R3S_VX Security Engine</p>
-                          <p className="text-neutral-500 text-xs font-sans">Autonomous DevSecOps & AI Architecture</p>
+                          <p className="text-neutral-300">Talal Nadeem Awan (4R3S_VX)</p>
+                          <p className="text-neutral-500 text-xs font-sans">Security Engineer • GRC & ISO 27001 • Production AI/RAG</p>
                         </div>
 
                         <div className="border-l-2 border-emerald-500/30 pl-4 py-1">
                           <span className="text-emerald-500 block text-[10px] uppercase tracking-widest mb-1 font-bold">Operational_Focus</span>
-                          <p className="text-neutral-300">Active Defense & Security-First Full-Stack Architecture</p>
+                          <p className="text-neutral-300">AppSec, GRC Governance (ISO 27001), & Production AI Architectures</p>
                         </div>
 
                         <div className="border-l-2 border-emerald-500/30 pl-4 py-1">
                           <span className="text-emerald-500 block text-[10px] uppercase tracking-widest mb-1 font-bold">Key_Objectives</span>
                           <ul className="text-neutral-400 space-y-2 mt-2">
-                            <li><span className="text-emerald-500/50">»</span> Engineering evasive networking tools</li>
-                            <li><span className="text-emerald-500/50">»</span> Developing automated legal-logic AI systems</li>
-                            <li><span className="text-emerald-500/50">»</span> Targeting ISO 27001 Lead Implementation</li>
+                            <li><span className="text-emerald-500/50">»</span> Formalizing ISO/IEC 27001 risk registers & audit governance (ex-NADRA GRC)</li>
+                            <li><span className="text-emerald-500/50">»</span> Scaling asynchronous hybrid RAG & deterministic AI pipelines (DocuMind v2)</li>
+                            <li><span className="text-emerald-500/50">»</span> Automating DevSecOps CI/CD verification & security linting gates (IronGate)</li>
                           </ul>
                         </div>
 
@@ -276,7 +276,7 @@ export default function Portfolio() {
                       </p>
                       
                       <div className="flex flex-col gap-4">
-                        <a href="mailto:secure@4r3svx.internal" className="flex items-center gap-4 p-4 rounded-lg bg-black/80 border border-neutral-800 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all group">
+                        <a href="mailto:talal.awan20@gmail.com" className="flex items-center gap-4 p-4 rounded-lg bg-black/80 border border-neutral-800 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all group">
                           <Mail className="w-5 h-5 text-neutral-400 group-hover:text-emerald-400" />
                           <span className="font-mono text-sm text-neutral-300 group-hover:text-emerald-400">Direct_Email</span>
                         </a>
@@ -284,7 +284,7 @@ export default function Portfolio() {
                           <Github className="w-5 h-5 text-neutral-400 group-hover:text-emerald-400" />
                           <span className="font-mono text-sm text-neutral-300 group-hover:text-emerald-400">Review_Source_Code</span>
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-black/80 border border-neutral-800 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all group">
+                        <a href="https://www.linkedin.com/in/talal-nadeem-awan-9431192b7/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-black/80 border border-neutral-800 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all group">
                           <Linkedin className="w-5 h-5 text-neutral-400 group-hover:text-emerald-400" />
                           <span className="font-mono text-sm text-neutral-300 group-hover:text-emerald-400">Professional_Network</span>
                         </a>

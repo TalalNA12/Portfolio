@@ -1,17 +1,18 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { SPARK_BADGE_MARKUP } from "./spark-badge-utils/spark-badge-markup";
+import { SPARK_BADGE_MARKUP, getSparkBadgeMarkup } from "./spark-badge-utils/spark-badge-markup";
 
 export type SparkBadgeVariant = "badge";
 
 export type SparkBadgeProps = {
   className?: string;
   sourceUrl?: string;
+  imageSrc?: string;
   variant?: SparkBadgeVariant;
 };
 
-export function SparkBadge({ className = "", sourceUrl }: SparkBadgeProps) {
+export function SparkBadge({ className = "", sourceUrl, imageSrc }: SparkBadgeProps) {
   const hostRef = useRef<HTMLDivElement>(null);
   const intersectsRef = useRef(true);
   const [mounted, setMounted] = useState(true);
@@ -60,7 +61,9 @@ export function SparkBadge({ className = "", sourceUrl }: SparkBadgeProps) {
             ready ? "opacity-100" : "opacity-0"
           }`}
           title="Animated credential badge in rain"
-          {...(sourceUrl ? { src: sourceUrl } : { srcDoc: SPARK_BADGE_MARKUP })}
+          {...(sourceUrl
+            ? { src: sourceUrl }
+            : { srcDoc: imageSrc ? getSparkBadgeMarkup(imageSrc) : SPARK_BADGE_MARKUP })}
           sandbox="allow-scripts"
           loading="eager"
           onLoad={() => setReady(true)}

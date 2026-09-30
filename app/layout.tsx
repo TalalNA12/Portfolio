@@ -14,8 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Talal | Security Engineer",
-  description: "Secure Full-Stack Developer & Active Defense Architect",
+  title: "Talal Nadeem Awan | Security Engineer & AI Architect",
+  description:
+    "Security Engineer & Developer specializing in AppSec, GRC (ISO 27001), Production RAG Architectures, and Active Defense Systems.",
 };
 
 export default function RootLayout({

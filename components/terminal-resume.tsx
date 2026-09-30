@@ -13,7 +13,7 @@ export default function ResumeTerminal() {
     setTimeout(() => setStatus("decrypting"), 1500);
     setTimeout(() => {
       setStatus("complete");
-      window.open("/files/Talal Nadeem Awan Curriculum Vitae-SW (1)", "_blank");
+      window.open("/files/Talal Nadeem Awan Curriculum Vitae-SW (1).pdf", "_blank");
     }, 3500);
   };
 

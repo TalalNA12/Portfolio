@@ -1,4 +1,5 @@
-export const SPARK_BADGE_MARKUP = `<!DOCTYPE html>
+export function getSparkBadgeMarkup(imageSrc: string = "/writeups/documind-arch.jpg") {
+  return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -100,7 +101,7 @@ export const SPARK_BADGE_MARKUP = `<!DOCTYPE html>
 
     // Load Architecture Image and apply High-Contrast Monochrome filter
     const archImg = new Image();
-    archImg.src = "/writeups/documind-arch.jpg";
+    archImg.src = "${imageSrc}";
 
     function loop() {
       ctx.fillStyle = "#000000";
@@ -189,3 +190,6 @@ export const SPARK_BADGE_MARKUP = `<!DOCTYPE html>
   </script>
 </body>
 </html>`;
+}
+
+export const SPARK_BADGE_MARKUP = getSparkBadgeMarkup("/writeups/documind-arch.jpg");
