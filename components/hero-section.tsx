@@ -13,7 +13,7 @@ export default function HeroSection() {
         
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-mono mb-8 cursor-default">
           <Terminal className="w-4 h-4 animate-pulse" />
-          <span>System initialized. Connection secure.</span>
+          <span>System initialized. AI & Cybersecurity Architecture Active.</span>
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 font-sans">
@@ -25,17 +25,17 @@ export default function HeroSection() {
             <span className="text-neutral-500 mr-2">{'>'}</span>
             <TypeAnimation
               sequence={[
-                "Security Engineer & Developer.",
+                "AI Engineer & Autonomous Agents Developer.",
                 2000,
-                "Production AI & RAG Architect.",
+                "Production RAG & Chatbot Architect.",
                 2000,
-                "GRC & ISO 27001 Specialist.",
+                "Active Defense & Cybersecurity Engineer.",
                 2000,
-                "Active Defense & AppSec Analyst.",
+                "Governance, Risk & Compliance (ISO 27001).",
                 2000,
-                "Automated DevSecOps & CI/CD.",
+                "Automated DevSecOps & Hardened CI/CD.",
                 2000,
-                "Bridging Hardware & Web Security.",
+                "Bridging Agentic AI & Hardened Systems.",
                 2000,
               ]}
               wrapper="span"

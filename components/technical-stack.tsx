@@ -1,72 +1,75 @@
 "use client";
 
-import { Shield, Terminal, Database, FileCheck, Code2, Cpu, Network } from "lucide-react";
+import { Shield, Terminal, Database, FileCheck, Code2, Cpu, Bot, Network } from "lucide-react";
 
 const skillNodes = [
   {
-    title: "AI_RAG & Neural Nets",
+    title: "Production RAG & Retrieval",
     icon: <Cpu className="w-5 h-5 text-emerald-400" />,
     skills: [
-      "DocuMind AI Engine (v1 & v2)",
-      "Hybrid Search (pgvector + GIN RRF)",
-      "FastAPI SSE Streaming & Async I/O",
-      "Deterministic Grounding & Citations",
-      "Quantum-Classical ML (PyTorch + PennyLane)",
+      "PostgreSQL Hybrid Search (pgvector HNSW + tsvector GIN)",
+      "Reciprocal Rank Fusion (RRF k=60) & BM25 Scoring",
+      "FastAPI Server-Sent Events (SSE Streaming <800ms TTFT)",
+      "In-Memory Cascade Fallback Engine (Multi-Model Resiliency)",
+      "Non-Blocking Asynchronous I/O (Google GenAI aio)",
+      "Deterministic Grounding & Vector Provenance Inspector",
+      "Stateless Persistence via Decoupled Storage Buckets",
+    ],
+  },
+  {
+    title: "Autonomous Agents & Chatbots",
+    icon: <Bot className="w-5 h-5 text-cyan-400" />,
+    skills: [
+      "Autonomous Multi-Step Agents (Vermilion Sales Agent)",
+      "Custom Conversational Chatbots (LawyerJr Legal Assistant)",
+      "Model Context Protocol (MCP) & Sandboxed Tool Execution",
+      "Prompt Routing & Pydantic Structured Output Validation",
+      "Real-Time Context Streaming & JSON-RPC Daemons",
+      "Context Window Optimization & Dynamic Knowledge Injection",
+    ],
+  },
+  {
+    title: "Cybersecurity & Active Defense",
+    icon: <Shield className="w-5 h-5 text-red-500" />,
+    skills: [
+      "OWASP Top 10 Auditing & Exploitation (Burp Suite, DVWA)",
+      "Network Assessment (Nmap, Nessus, Ettercap, Bettercap)",
+      "Active Defense Honeypots & Threat Retaliation (KAIROS)",
+      "Covert Firewall Evasion & ICMP Packet Tunneling (HadesPath)",
+      "Malware Behavior Simulation & Dynamic Analysis (BlackHook)",
     ],
   },
   {
     title: "Governance, Risk & Compliance",
     icon: <FileCheck className="w-5 h-5 text-purple-500" />,
     skills: [
-      "ISO/IEC 27001 Security Practice (NADRA)",
-      "Structured Risk Assessment & Registers",
-      "Information Security Auditing",
-      "NIST & OWASP Top 10 Governance",
-      "ISC2 CC (Candidate) & OPSWAT CIP",
+      "ISO/IEC 27001 Security Practice & Auditing (ex-NADRA GRC)",
+      "Structured Risk Assessments, Risk Registers & Treatment Plans",
+      "Organizational Asset Classification & Threat Modeling",
+      "NIST Framework & Security Governance Alignment",
+      "ISC2 Candidate (CC) & OPSWAT Introduction to CIP",
     ],
   },
   {
-    title: "Offensive & AppSec",
-    icon: <Shield className="w-5 h-5 text-red-500" />,
-    skills: [
-      "OWASP Top 10 Auditing & Exploitation",
-      "Burp Suite & PortSwigger Labs",
-      "Nmap, Nessus, Ettercap & Bettercap",
-      "Active Defense Honeypots (KAIROS)",
-      "ICMP Covert Tunneling (HadesPath)",
-    ],
-  },
-  {
-    title: "Full-Stack Engineering",
+    title: "Full-Stack & Quantum ML",
     icon: <Code2 className="w-5 h-5 text-emerald-500" />,
     skills: [
-      "Next.js, React & TypeScript",
-      "Python, FastAPI & Node.js",
-      "Modern Tailwind CSS & UI Systems",
-      "C++ & 8086 Assembly (PathFinder)",
-      "Modular Architecture & Reusable UI",
+      "Next.js 16 (App Router), React 19 & TypeScript",
+      "Python, FastAPI, Celery Distributed Workers & Node.js",
+      "Quantum-Classical Neural Networks (PyTorch + PennyLane)",
+      "16-Bit 8086 Assembly (PathFinder Memory Mapping & DFS)",
+      "Modern Tailwind CSS & Reactive Micro-UIs",
     ],
   },
   {
-    title: "Data & Storage Layers",
+    title: "DevSecOps & Data Infrastructure",
     icon: <Database className="w-5 h-5 text-cyan-500" />,
     skills: [
-      "PostgreSQL (pgvector HNSW + tsvector)",
-      "Supabase Cloud Storage Decoupling",
-      "Redis Task Queuing & Celery Workers",
-      "MongoDB & Prisma ORM",
-      "Pydantic Schemas & Zod Validation",
-    ],
-  },
-  {
-    title: "DevSecOps & Cloud",
-    icon: <Network className="w-5 h-5 text-cyan-400" />,
-    skills: [
-      "GitHub Actions Security CI/CD (IronGate)",
-      "Deterministic Pass/Fail Verification Gates",
-      "Secret Detection & Vulnerability Scanning",
-      "SonarQube Static Analysis Hardening",
-      "Docker Containers, Vercel & AWS Basics",
+      "GitHub Actions Security CI/CD Automation (IronGate)",
+      "Deterministic Pass/Fail Gates & Secret Regression Testing",
+      "PostgreSQL, Supabase Buckets & Redis Task Queuing",
+      "SonarQube Static Analysis & Code Vulnerability Hardening",
+      "Docker Container Decoupling, Vercel & AWS Fundamentals",
     ],
   },
 ];
@@ -75,7 +78,6 @@ export default function TechnicalStack() {
   return (
     <section className="py-24 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         <div className="mb-16">
           <h2 className="text-2xl font-bold font-sans text-white flex items-center gap-3">
             <Terminal className="text-emerald-500 w-6 h-6" />

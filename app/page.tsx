@@ -215,7 +215,7 @@ export default function Portfolio() {
                       <span className="text-emerald-500 font-mono">{'>'}</span> Active_Deployments
                     </h2>
                     <p className="text-neutral-400 font-mono text-sm max-w-2xl mx-auto">
-                      Tactical security tools, evasive networking, and hardened infrastructure.
+                      Autonomous AI agents, production RAG engines, tactical security tools, and hardened infrastructure.
                     </p>
                   </div>
                 </Reveal>
@@ -240,27 +240,28 @@ export default function Portfolio() {
                         <div className="border-l-2 border-emerald-500/30 pl-4 py-1">
                           <span className="text-emerald-500 block text-[10px] uppercase tracking-widest mb-1 font-bold">Node_Operator</span>
                           <p className="text-neutral-300">Talal Nadeem Awan (4R3S_VX)</p>
-                          <p className="text-neutral-500 text-xs font-sans">Security Engineer • GRC & ISO 27001 • Production AI/RAG</p>
+                          <p className="text-neutral-500 text-xs font-sans">AI & Autonomous Agents Engineer • Cybersecurity & GRC Architect</p>
                         </div>
 
                         <div className="border-l-2 border-emerald-500/30 pl-4 py-1">
                           <span className="text-emerald-500 block text-[10px] uppercase tracking-widest mb-1 font-bold">Operational_Focus</span>
-                          <p className="text-neutral-300">AppSec, GRC Governance (ISO 27001), & Production AI Architectures</p>
+                          <p className="text-neutral-300">Production RAG, Autonomous AI Agents & Active Defense Systems</p>
                         </div>
 
                         <div className="border-l-2 border-emerald-500/30 pl-4 py-1">
                           <span className="text-emerald-500 block text-[10px] uppercase tracking-widest mb-1 font-bold">Key_Objectives</span>
                           <ul className="text-neutral-400 space-y-2 mt-2">
-                            <li><span className="text-emerald-500/50">»</span> Formalizing ISO/IEC 27001 risk registers & audit governance (ex-NADRA GRC)</li>
-                            <li><span className="text-emerald-500/50">»</span> Scaling asynchronous hybrid RAG & deterministic AI pipelines (DocuMind v2)</li>
-                            <li><span className="text-emerald-500/50">»</span> Automating DevSecOps CI/CD verification & security linting gates (IronGate)</li>
+                            <li><span className="text-emerald-500/50">»</span> Architecting resilient hybrid RAG engines & custom client chatbots (DocuMind v2, LawyerJr)</li>
+                            <li><span className="text-emerald-500/50">»</span> Deploying autonomous agents with multi-step negotiation & tool routing (Vermilion Agent)</li>
+                            <li><span className="text-emerald-500/50">»</span> Formalizing ISO/IEC 27001 compliance, risk registers & security audits (ex-NADRA GRC)</li>
+                            <li><span className="text-emerald-500/50">»</span> Engineering active defense honeypots & CI/CD vulnerability verification gates (KAIROS, IronGate)</li>
                           </ul>
                         </div>
 
                         <div className="bg-emerald-500/5 border border-emerald-500/10 p-4 rounded-md">
                           <p className="text-neutral-400 leading-relaxed text-xs">
                             <span className="text-emerald-500 font-bold uppercase mr-2">[Mission]</span> 
-                            Bridging hardware architecture with hardened web apps. Every deployment is mission-critical.
+                            Bridging generative AI intelligence and autonomous agents with hardened cybersecurity infrastructure. Every deployment is robust, verifiable, and mission-critical.
                           </p>
                         </div>
                       </div>
